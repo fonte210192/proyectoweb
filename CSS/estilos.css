@@ -1,0 +1,239 @@
+/* ------------------------- */
+/* Estilos Generales */
+/* ------------------------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0;
+}
+
+body { 
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.texto-naranja {
+    font-weight: 300;
+    color: orange;
+}
+
+.texto-blanco {
+    font-weight: 700;
+    color: #fff;
+}
+
+.texto-negro {
+	color: #000;
+}
+/* clases de fullpage.js*/
+
+#fp-nav ul li a span{
+    background: orange;
+}
+#fp-nav ul li .fp-tooltip{
+    color: orange;
+}
+/* menu navegacion */
+
+.nav{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 70;
+    width: 100%;
+    margin: 0;
+    padding: 10px 20px;
+}
+.nav li, .nav a{
+    display: inline-block;
+    margin: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'oswald', sans-serif;
+    color: #cccc;
+    transition: .5s ease;
+}
+.nav li.active{
+    border-bottom: 2px solid orange;
+}
+.menu li a{
+    transition: .5s ease;
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER */
+
+/* #header{
+    background-image: url(../MEDIA/bg-imagen.jpeg);
+    background-position: center;
+} */
+#header .contenedor-titulo{
+    text-align: center;
+    position: relative;
+    z-index: 99;
+}
+#header .titulo{
+    font-size: 70px;
+    text-transform: uppercase;
+
+}
+#header .contenedor-icono{
+    position: absolute;
+    z-index: 99;
+    bottom: 3%;
+    left: 50%;
+    font-size: 40px;
+    animation: bajar-subir 1s ease infinite;
+}
+.bg-video{
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background: #000;
+    background-position: center;
+    background-size: contain;
+    object-fit: cover;
+
+}
+/* ANIMACIONES */
+@keyframes bajar-subir{
+    0% {transform: translateY(20px) ;}
+    25% {transform: translateY(0px) ;}
+    100% {transform: translateY(20px) ;}
+
+}
+/* PRODUCTOS */
+
+#producto article{
+    background-position: center;
+    background-size: cover;
+}
+#producto article:nth-child(1){
+    background-image: url(../MEDIA/producto-01.jpg);
+}#producto article:nth-child(2){
+    background-image: url(../MEDIA/producto-02.jpg);
+}#producto article:nth-child(3){
+    background-image: url(../MEDIA/producto-03.jpg);
+}
+#producto .informacion-producto{
+    margin: 0 30px;
+}
+#producto .informacion-producto::before{
+    content: "";
+    height: 50px;
+    width: 2px;
+    display: inline-block;
+    background: orange;
+    position: absolute;
+    top: 50%;
+    margin: -10px;
+}
+#producto .modelo{
+    font-size: 40px;
+}
+#producto .descripcion{
+    font-size: 22px;
+}
+#producto .precio{
+    font-size: 25px;
+}
+#producto .precio::before{
+    content: "$";
+}
+
+/* CLASES FULPAGES.JS / FLECHAS SLIDE */
+
+.fp-controlArrow.fp-prev,.fp-controlArrow.fp-next{
+    
+    top: 95%;
+}
+ 
+
+.fp-controlArrow.fp-prev{
+    left: 80%;
+    border-width: 20px 20px 20px 0;
+    border-color: transparent #000 transparent transparent;
+}
+.fp-controlArrow.fp-next{
+    right: 50px;
+    border-width: 20px 0px 20px 20px;
+    border-color: transparent transparent transparent #000;
+}
+
+
+/* footer */
+
+.footer .texto-naranja{
+    text-transform: uppercase;
+    font-size: 60px;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+.footer h2{
+    font-family: 'oswald', sans-serif;
+    transition: .3s ease all;
+    /* opacity: 0; */
+
+}
+.footer .redes-sociales{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    font-size: 50px;
+}
+.footer .redes-sociales a{
+    display: flex;
+    width: 100px;
+    height: 100px;
+    background: #ffff;
+    color: #30313a;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    margin: 0 20px;
+}
+.footer .facebook i{
+    color: #3b5998;
+}
+.footer .twitter i{
+    color: #1da1f2;
+}
+.footer .instagram i{
+    color: #c13584;
+}
+
+/* 
+
+.footer .facebook :hover{
+    background: #3b5998;
+}
+.footer .twitter :hover{
+    background: #1da1f2;
+}
+.footer .instagram :hover{
+    background: #c13584;
+}
+
+
+.footer .facebook :hover i{
+    color: #ffff;
+}
+.footer .twitter :hover i{
+   color: #ffff;
+}
+.footer .instagram :hover i{
+    color: #ffff;
+} */
