@@ -1,2 +1,0 @@
-# proyectoweb
-full pages .js
